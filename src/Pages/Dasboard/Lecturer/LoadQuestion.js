@@ -3,6 +3,7 @@ import styles from './Question.module.css';
 import {FaPaperPlane} from 'react-icons/fa';
 import Loader from 'react-loader-spinner';
 import Axios from 'axios';
+import { apiClient } from '../../axios';
 
 
 const LoadQuestion = ({ lecInfo }) => {
@@ -45,25 +46,26 @@ const LoadQuestion = ({ lecInfo }) => {
     }
     
     const upload = async () =>{
-      const result = await Axios.post('http://localhost:3020/question', payload);
-      if(result.data){
-        console.log(result.data);
-        alert(result.data);
-        setTimeout(() => {
-          setLoading(false);
-          setDept('');
-          setLevel('');
-          setCourse('');
-          setCode('');
-          setQuest('');
-          setAns('');
-          setKey1('')
-          setKey2('');
-          setKey3('');
-          setKey4('')
-        }, 2000);
-        return;
-      }
+      await apiClient.post('/question', payload).then((result) => {
+        if(result.data){
+          console.log(result.data);
+          alert(result.data);
+          setTimeout(() => {
+            setLoading(false);
+            setDept('');
+            setLevel('');
+            setCourse('');
+            setCode('');
+            setQuest('');
+            setAns('');
+            setKey1('')
+            setKey2('');
+            setKey3('');
+            setKey4('')
+          }, 2000);
+          return;
+        }
+      })
       setError('Ooops! Something went wrong. Check your network and try again.')
       setLoading(false);
     }

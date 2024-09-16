@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import style from './SignUp.module.css';
 import Images from '../../../Assets/Images/Images';
 import { Link } from 'react-router-dom';
-import Axios from 'axios';
 import Loader from 'react-loader-spinner';
+import { apiClient } from '../../axios';
 
 
 const SignUp = () =>{
@@ -70,7 +70,7 @@ const SignUp = () =>{
       if(!student){
         const register = async () => {
           try {
-            const result = await Axios.post('http://localhost:3020/staff/register', staffData)
+             apiClient.post('/staff/register', staffData).then((result) => {
             if(result.status === 200){
               console.log(result.data)
               setMsg('Registration successful! Redirecting...');
@@ -78,6 +78,7 @@ const SignUp = () =>{
                 window.location.href = '/login';
               }, 4000);
             }
+          })
           } catch (err) {
             console.log({erro:err});
             setErrorMsg('Oops! Something went wrong. Check Your Network and try again.');
@@ -90,7 +91,7 @@ const SignUp = () =>{
       else{
         const register = async () => {
           try {
-            const result = await Axios.post('http://localhost:3020/student/register', studentData)
+            await apiClient.post('/student/register', studentData).then((result) => {
             if(result.status === 200){
               console.log(result.data)
               setMsg('Registration successful! Redirecting...');
@@ -98,6 +99,7 @@ const SignUp = () =>{
                 window.location.href = '/login';
               }, 4000);
             }
+            })
           } catch (err) {
             console.log({erro:err});
             setErrorMsg('Oops! Something went wrong. Check Your Network and try again.');

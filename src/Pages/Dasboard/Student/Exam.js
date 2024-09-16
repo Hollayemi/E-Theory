@@ -4,6 +4,7 @@ import styles from './Exam.module.css'
 import cx from 'classname';
 import {FaBackward, FaChevronLeft, FaChevronRight, FaRegPaperPlane } from 'react-icons/fa';
 import  Modals  from '../../../Components/Modal/Modals';
+import { apiClient } from '../../axios';
 
 
 
@@ -123,22 +124,21 @@ const Exam = (props) =>{
     };
     console.log(payload);
 
-    // const recordExist = await Axios.get(`http://localhost:3020/result/?regNo=${payload.regNo}&code=${payload.code}`);
+    // const recordExist = await apiClient.get(`/result/?regNo=${payload.regNo}&code=${payload.code}`);
     // if(recordExist.data[0].course_code === payload.code){
     //   console.log(recordExist.data);
-    //   const updateRecord = await Axios.put('http://localhost:3020/result/update',updatePayload);
+    //   const updateRecord = await apiClient.put('/result/update',updatePayload);
     //   if(updateRecord.data.rowCount > 0){
     //     console.log('Score Saved!');
 
     //   }
     //   return;
     // }
-    const saved = await Axios.post('http://localhost:3020/result/upload',payload);
-    console.log(saved.data)
-    if(saved.data){
-      setTotal(saved.data.total);
-    }
-    console.log(payload);
+    await apiClient.post('/result/upload',payload)
+      .then((res) => {
+        
+        setTotal(res.data.total);
+      });
   }
 
   return(

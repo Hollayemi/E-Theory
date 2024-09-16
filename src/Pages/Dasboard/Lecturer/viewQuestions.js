@@ -2,18 +2,21 @@ import React, { useState } from 'react';
 import styles from './ViewResult.module.css';
 import Axios from 'axios';
 import cx from 'classname';
+import { apiClient } from '../../axios';
 
 
 const ViewQuestions = () =>{
     const [code, setCode] = useState();
     const [questions, setQuestions] = useState([]);
     const showQuestions = async () => {
-        const request = await Axios.get(`http://localhost:3020/questions/${code}`);
+        await apiClient.get(`/questions/${code}`).then((request) => {;
         setQuestions(request.data)
+        })
     }
     const startExam = async () => {
-        const request = await Axios.put(`http://localhost:3020/exam/start/${code}`);
+        await apiClient.put(`/exam/start/${code}`).then((request) => {;
         setQuestions(request.data)
+        })
     }
   return(
     <div className={styles.wraps}>

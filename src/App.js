@@ -7,6 +7,7 @@ import Login from './Pages/AuthPage/Login/Login';
 import SignUp from './Pages/AuthPage/SignUp/SignUp';
 import Dashboard from './Pages/Dasboard'
 
+export const server = "http://localhost:3020"
 
 function App() {
 

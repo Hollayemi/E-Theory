@@ -5,6 +5,7 @@ import Images from '../../../Assets/Images/Images'
 import { Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import Axios from 'axios';
+import { apiClient } from '../../axios';
 
 const Login = () =>{
     
@@ -35,8 +36,7 @@ const Login = () =>{
     if(!student){
       const login = async () => {
         try {
-          const result = await Axios.post("http://localhost:3020/staff/login",payload)
-          console.log(result)
+          await apiClient.post("/staff/login",payload).then((result) => {
           if(result.data){
             console.log(result.data)
             let details ={admin:true, name: result.data.fullName, id: result.data._id};
@@ -47,6 +47,7 @@ const Login = () =>{
           setTimeout(() => {
             window.location.href='/dashboard/user/lecturer';
           }, 4000);
+          })
         } catch (error) {
           console.log(error);
           setLoading(false);
@@ -58,15 +59,16 @@ const Login = () =>{
     }
     const login = async () => {
       try {
-        const result = await Axios.post("http://localhost:3020/student/login",payload)
-        if(result.data){
+        await apiClient.post("/student/login",payload).then((result) => {
+        
           let details = {type:'user',name:result.data.fullName, regNo:result.data.regNo, id: result.data._id}
           localStorage.setItem("userType",JSON.stringify(details));
           setMsg('Redirecting...');
-        }
+        
         setTimeout(() => {
           window.location.href='/dashboard/user';
-        }, 4000);
+        }, 4000)
+      })
       } catch (error) {
         console.log(error);
         setLoading(false);

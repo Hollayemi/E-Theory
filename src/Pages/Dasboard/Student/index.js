@@ -11,6 +11,7 @@ import UserHome from './UserHome';
 import {BsCollectionFill,BsPencilSquare, BsFillHouseFill} from 'react-icons/bs';
 import {AiOutlineFilePdf, AiOutlineLogout } from 'react-icons/ai';
 import Axios from 'axios';
+import { apiClient } from '../../axios';
 
 const Student = ({name, regNo}) => {
 
@@ -43,13 +44,13 @@ const Student = ({name, regNo}) => {
   // }
 
   useEffect(() =>{
-    Axios.get(`http://localhost:3020/result/?regNo=${user.regNo}`)
+    apiClient.get(`/result/?regNo=${user.regNo}`)
       .then((response) => {
         if(response.data.length){
           setResults(response.data);
         }
       });
-    Axios.get('http://localhost:3020/question')
+    apiClient.get('/question')
       .then((response) => {
         if(response.data.length){
           setExam(response.data)
