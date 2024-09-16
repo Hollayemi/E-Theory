@@ -44,7 +44,7 @@ const Student = ({name, regNo}) => {
   // }
 
   useEffect(() =>{
-    apiClient.get(`/result/?regNo=${user.regNo}`)
+    apiClient.get(`/results/?regNo=${user.regNo}`)
       .then((response) => {
         if(response.data.length){
           setResults(response.data);
@@ -94,7 +94,7 @@ const Student = ({name, regNo}) => {
           {/* <Particles params={particlesOptions} /> */}
           {nav === 'register'? <Register /> :
             nav === 'exam'? <Exam user={user} exam={exam}/> :
-            nav === 'result'? <Result regNo ={user.regNo} results ={results}/>:
+            nav === 'result'? <Result regNo ={user.regNo} name={name} results ={results}/>:
             nav === ''?<UserHome />: null
           } 
         </div>

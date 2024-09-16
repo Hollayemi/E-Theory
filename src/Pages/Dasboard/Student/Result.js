@@ -3,9 +3,9 @@ import styles from './Result.module.css'
 
 
 
-const Result = ({regNo, results}) =>{
-
-  const headers = {"s/n":'', name:'', regNo:'', course:'', code: '', score:''}
+const Result = ({regNo,name, results}) =>{
+console.log(results)
+  const headers = {"s/n":'', name:'', regNo:'', course:'', score:''}
   let tableHeader = () => {
     let header = Object.keys(headers);
     return header.map((key, index) => {
@@ -17,30 +17,30 @@ const Result = ({regNo, results}) =>{
     return data.map((result, index) => {
       return<tr key={result.id}>
         <td>{++index}</td>
-        <td>{result.name}</td>
-        <td>{result.reg_no}</td>
-        <td>{result.course_title}</td>
+        <td>{name}</td>
+        <td>{result.regNo}</td>
+        {/* <td>{result.course_title}</td> */}
         <td>{result.course_code}</td>
-        <td>{result.score}</td>
+        <td>{result.score?.toFixed(2)}</td>
       </tr>
     })
   };
 
-  const [courseTitle, setCourseTitle] = useState('');
+  const [courseCode, setcourseCode] = useState('');
   const [warning, setWarning] = useState('');
   const [showResult, setShowResult] = useState(false);
 
   const handleDisplay = () => {
     setWarning('');
-    if(courseTitle === ''){
+    if(courseCode === ''){
       setWarning('Please Type Course Title in the box above.');
       return
     }
     setShowResult(true);
-    setCourseTitle('');
+    setcourseCode('');
   }
   let filtered = results.filter((result) =>{
-    return result.course_title.toLowerCase() === courseTitle.toLowerCase();
+    return result.course_code.toLowerCase() === courseCode.toLowerCase();
   })
   
   return(
@@ -49,14 +49,14 @@ const Result = ({regNo, results}) =>{
         <h1>View Exam Results</h1>
         <div className={styles.form}>
           <input type='text' name='course' placeholder='Enter Course Title' required
-            onChange={(e) => setCourseTitle(e.target.value)}
-            value={courseTitle}
+            onChange={(e) => setcourseCode(e.target.value)}
+            value={courseCode}
           />
           <button id={styles.filter}
             onClick={() =>handleDisplay()}
           >Show Result</button>
           <button id={styles.all} 
-            onClick={() => {setCourseTitle(''); setShowResult(true)}}
+            onClick={() => {setcourseCode(''); setShowResult(true)}}
           >All Result</button> 
         </div> 
       </div>
@@ -71,7 +71,7 @@ const Result = ({regNo, results}) =>{
               </tr>
             </thead>
             <tbody>
-            {courseTitle !== ''?( 
+            {courseCode !== ''?( 
               renderTable(filtered)
             ): renderTable(results)}
             </tbody>
