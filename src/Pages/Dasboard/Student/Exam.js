@@ -136,7 +136,7 @@ const Exam = (props) =>{
     const saved = await Axios.post('http://localhost:3020/result/upload',payload);
     console.log(saved.data)
     if(saved.data){
-      console.log('Record Saved.');
+      setTotal(saved.data.total);
     }
     console.log(payload);
   }
@@ -193,7 +193,7 @@ const Exam = (props) =>{
                 </div>
                 <Modals show={show} handleClose={handleClose} handleShow={handleShow} title='Your Exam Score'>
                   <p>Your total Score is </p>
-                  <p className='lead display-3'>{(total/(exam.length * 5)) * 100}%</p>
+                  <p className='lead display-3'>{total ? `${total.toFixed(0)}%` : "loading"}</p>
                 </Modals>
               </div>
             </div>
