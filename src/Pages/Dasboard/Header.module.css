@@ -1,0 +1,57 @@
+.ebsu {
+  width: 30%;
+  height: 20%;
+  margin: 5px;
+}
+.imageDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.icon_container {
+  margin: 17px 10px 5px 0;
+}
+.icons {
+  width: 40px;
+  height: 40px;
+  color: #094074;
+  margin: 5px;
+  cursor: pointer;
+}
+.logoDiv{
+  display: flex;
+  align-items: center;
+}
+.logoDiv div {
+  margin-left: 10px;
+}
+.logoDiv h4 {
+  color: #094074;
+  font-weight: 700;
+  font-size: 40px;
+}
+.logoDiv h5 {
+  color: #094074;
+  font-weight: 400;
+  font-size: 20px;
+}
+.bg {
+  background: #094074;
+}
+.a_link,
+#a_link {
+  color: #fff !important;
+  font-size: 1.3em;
+}
+.a_link:hover {
+  color: #fff !important;
+  cursor: default !important;
+}
+#a_link:hover {
+  color: #fe9000 !important;
+}
+@media screen and (max-width: 780px) {
+  .ebsu {
+    width: 50%;
+    height: 30%;
+  }
+}

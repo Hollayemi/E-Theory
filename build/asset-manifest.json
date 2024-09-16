@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c8275038.chunk.css",
+    "main.js": "/static/js/main.ab0181af.chunk.js",
+    "main.js.map": "/static/js/main.ab0181af.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.eaebfe47.js",
+    "runtime-main.js.map": "/static/js/runtime-main.eaebfe47.js.map",
+    "static/css/2.05a5ddcf.chunk.css": "/static/css/2.05a5ddcf.chunk.css",
+    "static/js/2.561f804e.chunk.js": "/static/js/2.561f804e.chunk.js",
+    "static/js/2.561f804e.chunk.js.map": "/static/js/2.561f804e.chunk.js.map",
+    "static/js/3.9d6e1e57.chunk.js": "/static/js/3.9d6e1e57.chunk.js",
+    "static/js/3.9d6e1e57.chunk.js.map": "/static/js/3.9d6e1e57.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.05a5ddcf.chunk.css.map": "/static/css/2.05a5ddcf.chunk.css.map",
+    "static/css/main.c8275038.chunk.css.map": "/static/css/main.c8275038.chunk.css.map",
+    "static/js/2.561f804e.chunk.js.LICENSE.txt": "/static/js/2.561f804e.chunk.js.LICENSE.txt",
+    "static/media/EBS.5e7cad1b.png": "/static/media/EBS.5e7cad1b.png",
+    "static/media/paper.1cbd018e.png": "/static/media/paper.1cbd018e.png",
+    "static/media/repoIcon.45422ad0.png": "/static/media/repoIcon.45422ad0.png",
+    "static/media/schoolBuilding.f0a64562.png": "/static/media/schoolBuilding.f0a64562.png",
+    "static/media/slide1.bcb17da5.png": "/static/media/slide1.bcb17da5.png",
+    "static/media/slide2.b6359669.png": "/static/media/slide2.b6359669.png",
+    "static/media/student.b3382cdc.png": "/static/media/student.b3382cdc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eaebfe47.js",
+    "static/css/2.05a5ddcf.chunk.css",
+    "static/js/2.561f804e.chunk.js",
+    "static/css/main.c8275038.chunk.css",
+    "static/js/main.ab0181af.chunk.js"
+  ]
+}

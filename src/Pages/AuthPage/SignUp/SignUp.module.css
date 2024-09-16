@@ -1,0 +1,102 @@
+.signupWrap {
+  padding: 10px;
+  width: 350px;
+  text-align: center;
+  border: 1px solid #ccc;
+  /* box-shadow: 0 0 14px #ccc; */
+  margin: 5% auto;
+  border-radius: 15px;
+}
+.headerText h4 {
+  font-weight: 800;
+  font-size: 2.5em;
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 2px 2px 2px #0373ac;
+}
+.headerText p {
+  font-size: 1.2em;
+}
+.headerText img {
+  width: 95%;
+  height: auto;
+  margin: 2% 0;
+}
+.signupWrap p {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+#s_log {
+  text-align: left;
+  margin-left: 2%;
+  font-size: 1.4em;
+  font-weight: 800;
+}
+.staff,
+.login {
+  color: rgb(121, 1, 1);
+  font-weight: 700;
+  cursor: pointer;
+}
+.staff,
+.login {
+  margin-left: 5px;
+}
+.staff:hover,
+.login:hover {
+  text-decoration: none;
+  color: #0373ac;
+}
+.sForm {
+  padding: 5px;
+  width: 100%;
+}
+.inputDiv {
+  width: 100%;
+  padding: 5px;
+}
+.inputDiv input {
+  padding: 6px;
+  width: 60%;
+  font-size: 1.3em;
+  margin: 0 5px;
+  background: #ccc;
+  border-style: none;
+  border-radius: 5px;
+}
+.inputDiv input:focus {
+  outline: none;
+}
+.hide {
+  display: none;
+}
+#error {
+  color: #d40404;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 23px;
+}
+#sendBtn {
+  padding: 2px;
+  border-radius: 15px;
+  border-style: none;
+  color: #fff;
+  background: #0373ac;
+  width: 100%;
+  margin: 2% 15px;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+#sendBtn:hover {
+  background: #fff;
+  border: 1px solid;
+  border-color: #0373ac;
+  color: #0373ac;
+  transition: all 2s ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .signupWrap {
+    width: 40%;
+  }
+}

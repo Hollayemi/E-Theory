@@ -1,0 +1,147 @@
+.mainWrap {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sideNav {
+  background: #094074;
+  padding: 10px;
+  padding-top: 4%;
+  width: 15%;
+}
+.sideNav hr {
+  background-color: #ffd;
+  border: 4px solid #ffd;
+  border-radius: 10px;
+}
+.menu,
+.icons {
+  font-size: 50px;
+  color: #fff;
+}
+.menuBtn {
+  margin-top: 8% !important;
+  display: none;
+}
+.btnWrap {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10% 0;
+}
+.sideNavBtn,
+.menuBtn {
+  padding: 10px;
+  border-radius: 15px;
+  margin: 5% 0;
+  width: 100%;
+  color: #fff;
+  background: #fe9000;
+  border-style: none;
+}
+.tooltip {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.sideNavBtn:hover {
+  background: #094074;
+  border: 2px solid #ffd;
+  transition: all 1s ease;
+}
+#sideNavLogout {
+  background: #d32102;
+  margin: 15% 0 0 0;
+}
+
+.paperWrap {
+  width: 85%;
+}
+.paper {
+  width: 100%;
+}
+.banner {
+  background: #fe9000;
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+}
+.title {
+  font-size: 2.4em;
+  font-weight: 900;
+}
+.banner .textP {
+  font-size: 1.4em;
+  font-weight: 400;
+}
+.listing {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  margin: 0;
+}
+.itemS {
+  padding: 10px;
+  background: #094074c4;
+  color: #fff;
+  border-radius: 10px;
+  width: 25%;
+  text-align: center;
+  margin: 20px 1%;
+}
+.itemS h4 {
+  font-size: 3em;
+  font-weight: 800;
+}
+.itemS p {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.footer {
+  background: #094074;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px;
+  color: #fff;
+  margin: 0;
+}
+
+@media screen and (max-width: 780px) {
+  .listing {
+    flex-direction: column;
+  }
+  .itemS {
+    width: 85%;
+    margin: 2% auto;
+  }
+}
+@media screen and (max-width: 980px) {
+  .sideNav hr {
+    border: 1px solid #e2e0e0;
+    border-radius: 5px;
+  }
+  .sideNavBtn,
+  .menuBtn {
+    background: #094074;
+    position: relative;
+  }
+  .menuBtn {
+    display: block;
+  }
+  .sideNavBtn:hover {
+    border: none;
+  }
+  .tooltip {
+    position: absolute !important;
+    visibility: hidden;
+    width: max-content;
+    padding: 5px;
+    border-radius: 6px;
+    top: 20px;
+    left: 65px;
+    background: #111010c5;
+  }
+  .sideNavBtn:hover .tooltip {
+    visibility: visible;
+  }
+  .sideNavBtn:focus .tooltip {
+    visibility: hidden;
+  }
+}

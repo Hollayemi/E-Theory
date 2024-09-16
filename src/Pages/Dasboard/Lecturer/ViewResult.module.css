@@ -1,0 +1,73 @@
+.wraps {
+  margin: 3% auto;
+  width: 80%;
+  text-align: center;
+}
+.header h1 {
+  font-size: 3em;
+  font-weight: 800;
+  margin: 2% 0;
+}
+.header form {
+  padding: 10px;
+}
+.header form input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 2%;
+  background: #c4c4c4;
+  font-size: 1.2em;
+}
+.header form input:focus {
+  outline: none;
+}
+.header form button {
+  padding: 6px;
+  border-style: none;
+  color: #fff;
+  background: #4fb1e5;
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.tableContainer {
+  width: 80%;
+  margin: 2% auto;
+  overflow-x: auto;
+  text-align: left;
+}
+table {
+  width: 100%;
+}
+thead {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+tr {
+  font-size: 1.1em;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 980px) {
+  .header form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    margin: 5% auto;
+  }
+  .header form input,
+  .header form button {
+    width: 100%;
+    margin: 3% 0;
+  }
+}

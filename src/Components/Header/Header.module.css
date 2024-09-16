@@ -1,0 +1,163 @@
+.ebsu {
+  width: 40%;
+  height: auto;
+  margin: 5px;
+}
+.imageDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.icon_container {
+  margin: 17px 10px 5px 0;
+}
+.logoDiv {
+  display: flex;
+  align-items: center;
+}
+
+.logoDiv div {
+  margin-left: 10px;
+}
+
+.logoDiv h4 {
+  color: #094074;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.logoDiv h5 {
+  color: #094074;
+  font-weight: 400;
+  font-size: 20px;
+}
+.icons {
+  width: 40px;
+  height: 40px;
+  color: #094074;
+  margin: 5px;
+  cursor: pointer;
+}
+.headWrap {
+  background: #094074;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  height: 70px;
+}
+.logo {
+  width: 180px;
+  height: 50px;
+  margin: 3px 5px;
+}
+.lists {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.lists li a {
+  padding: 15px 10px;
+  font-size: 1.3em;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+.lists li a:hover {
+  color: #fe9000;
+}
+/* Hamburger styling */
+.hamburger {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  background: #094074;
+  cursor: pointer;
+  z-index: 40;
+  visibility: hidden;
+}
+.hamburger div {
+  width: 2rem;
+  height: 0.38rem;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 5px;
+  transition: all 0.5s linear;
+}
+.open div:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: 1px;
+}
+.open div:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.open div:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 1px;
+}
+
+@media screen and (max-width: 360px) {
+  .icons {
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+  }
+  .ebsu {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ebsu {
+    width: 30%;
+    height: 20%;
+  }
+  .logo {
+    width: 100px;
+    height: 30px;
+    margin: 12px 5px;
+  }
+  .icons {
+    width: 25px;
+    height: 25px;
+  }
+  .hamburger {
+    top: 72px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .ebsu {
+    width: 65%;
+    height: 30%;
+  }
+  .lists {
+    flex-flow: column nowrap;
+    padding: 2% 0 5px 0;
+    background: #094074b6;
+    position: fixed;
+    top: 72px;
+    right: 0;
+    width: 100%;
+    height: fit-content;
+    transform: translateY(45%);
+    transition: transform 0.5s ease;
+    z-index: 40;
+  }
+  .lists li {
+    padding: 5px;
+  }
+  .hide {
+    visibility: hidden;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+  }
+
+  .hamburger {
+    position: fixed;
+    /* top: 92px; */
+    right: 20px;
+    visibility: visible;
+  }
+}

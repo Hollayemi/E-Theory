@@ -1,0 +1,95 @@
+.wrapDiv {
+  width: 100%;
+  text-align: center;
+  padding-top: 4%;
+}
+.titleText h1 {
+  font-size: 3.5em;
+  font-weight: 800;
+  line-height: 45px;
+}
+.titleText p {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: red;
+}
+hr {
+  width: 80%;
+  margin: 0 auto;
+}
+.questForm {
+  display: flex;
+  width: 80%;
+  margin: 3% auto;
+  background: #a6a2a24b;
+  font-size: 1.2em;
+  padding: 10px;
+  border-radius: 5px;
+}
+.leftDiv,
+.rightDiv {
+  width: 95%;
+  margin: 3% auto;
+}
+.inputDiv {
+  width: 95%;
+  margin: 0 2%;
+}
+.leftDiv input,
+.rightDiv input {
+  width: 100%;
+  padding: 10px;
+  background: #c4c4c4;
+  margin: 3% 0;
+  border-style: none;
+  border-radius: 5px;
+}
+.leftDiv textarea {
+  width: 100%;
+  background: #c4c4c4;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  margin: 3% 0;
+}
+.leftDiv input:focus,
+.leftDiv textarea:focus,
+.rightDiv input:focus {
+  outline: none;
+}
+.keyDiv {
+  width: 100%;
+  padding: 6px;
+  background: #c4c4c4;
+  border-radius: 5px;
+  margin: 3% 0;
+}
+.keyDiv input {
+  margin: 1% 0 !important;
+  border-bottom: 3px solid #000;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+.uploadBtn {
+  padding: 6px;
+  border-style: none;
+  border-radius: 10px;
+  color: #fff;
+  background: #4fb1e5;
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-top: 2%;
+}
+.uploadBtn:hover {
+  background: #fe9000;
+}
+@media screen and (max-width: 900px) {
+  .questForm {
+    flex-direction: column;
+    width: 95%;
+  }
+  .leftDiv textarea {
+    margin: 5px 0 !important;
+  }
+}

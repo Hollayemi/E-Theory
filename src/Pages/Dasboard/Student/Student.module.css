@@ -1,0 +1,144 @@
+.mainWrap {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sideNav {
+  background: #094074;
+  padding: 10px 2px;
+  width: 15%;
+  padding: 4% 10px 10px 10px;
+}
+.home {
+  display: none;
+}
+.sideNav hr {
+  background-color: #ffd;
+  border: 2px solid #ffd;
+  border-radius: 10px;
+}
+.btnWrap {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10% 0;
+}
+.sideNavBtn {
+  padding: 8px;
+  border-radius: 15px;
+  margin: 5% 0;
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fff;
+  background: #fe9000;
+  border-style: none;
+  position: relative;
+}
+.btnIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.sideNavBtn:hover {
+  background: #094074;
+  border: 2px solid #ffd;
+  transition: all 1s ease;
+}
+#sideNavLogout {
+  background: #dd2303;
+  margin: 45% 0 0 0;
+}
+#sideNavLogout:hover {
+  color: #094074;
+}
+
+.paperWrap {
+  width: 85%;
+}
+.paper {
+  width: 100%;
+}
+.banner {
+  background: #fe9000;
+  padding: 25px;
+  color: #fff;
+  text-align: center;
+}
+.title {
+  font-size: 2.4em;
+  font-weight: 900;
+}
+.banner .textP {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.listing {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  margin: 0;
+}
+.itemS {
+  padding: 10px;
+  background: #094074c4;
+  color: #fff;
+  border-radius: 10px;
+  width: 25%;
+  text-align: center;
+  margin: 20px 1%;
+}
+.itemS h4 {
+  font-size: 3em;
+  font-weight: 800;
+}
+.itemS p {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.footer {
+  background: #094074;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px;
+  color: #fff;
+  margin: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .sideNavBtn p,
+  #sideNavLogout p,
+  Link.tooltip {
+    position: absolute !important;
+    background: #fe9000 !important;
+    text-decoration: none;
+    width: max-content;
+    color: #fff;
+    left: 50px;
+    top: 20px;
+    padding: 5px;
+    border-radius: 8px;
+    visibility: hidden;
+    font-size: 0.8em;
+  }
+  .home {
+    display: block;
+    margin: 1% auto;
+  }
+  .sideNavBtn {
+    background: #094074;
+  }
+  #sideNavBtn {
+    background: red;
+    color: #fff;
+  }
+  #sideNavLogout:hover,
+  .sideNavBtn:hover {
+    border: none;
+  }
+
+  .sideNavBtn:hover p {
+    visibility: visible !important;
+  }
+  .paperWrap {
+    width: 100%;
+  }
+}

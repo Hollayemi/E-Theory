@@ -1,0 +1,120 @@
+.flex,
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0;
+}
+.divWrap {
+  display: flex;
+}
+.cardWrap {
+  width: 30%;
+  margin: 2%;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #4c4c4c;
+}
+.cardWrap .flex h2 {
+  font-size: 2em;
+  font-weight: 700;
+}
+.cardWrap p {
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.cardBtn {
+  width: 85%;
+  padding: 5px;
+  border-radius: 10px;
+  background: #4fb1e5;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #fff;
+  border-style: none;
+  margin: 2%;
+}
+.cardBtn:hover {
+  background: linear-gradient(to right, #fe9000, #024468);
+}
+.title {
+  font-size: 1.9rem;
+  font-weight: 900;
+  line-height: 24px;
+  padding: 5px;
+  color: #094074;
+}
+.schoolDiv {
+  width: 54%;
+  height: 80%;
+}
+.school {
+  width: 100%;
+  height: 100%;
+}
+.info {
+  background: #fe9000;
+  color: #fff;
+  padding: 25px;
+  width: 45%;
+}
+.info p {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 30px;
+  margin: 3% auto;
+}
+.more {
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  font-size: 1.8em;
+  font-weight: 800;
+  color: #fff;
+}
+.more:hover {
+  background: #094074;
+}
+
+@media (max-width: 960px) {
+  .divWrap {
+    flex-direction: column;
+  }
+  .flex {
+    width: 60%;
+  }
+  .flex h2 {
+    font-size: 1.5em;
+  }
+  .cardWrap {
+    width: 55%;
+    margin: 3% auto;
+  }
+  .flex1 {
+    flex-direction: column;
+    margin: 0;
+  }
+  .schoolDiv,
+  .info {
+    width: 98%;
+  }
+  .info {
+    text-align: center;
+  }
+  .info p {
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 575px) {
+  .cardWrap .flex h2 {
+    font-size: 24px;
+  }
+  .cardWrap {
+    width: 90%;
+  }
+  .cardBtn {
+    width: 80%;
+  }
+}

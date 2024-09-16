@@ -1,0 +1,85 @@
+.hero {
+  display: flex;
+  background: #cd6a32;
+}
+.heroImage {
+  width: 65%;
+  height: auto;
+}
+.banner {
+  padding: 25px;
+  text-align: center;
+  background: #094074c9;
+  color: #fff;
+}
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.banner p {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+.banner button {
+  padding: 5px;
+  border-style: none;
+  border-radius: 7px;
+  background: transparent;
+  border: 1px solid #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+.banner button:hover {
+  background: #fff;
+  color: #094074c9;
+}
+.animated_shadow_quote {
+  display: inline-block;
+  margin: 14% 1em;
+  max-width: 20em;
+
+  position: relative;
+}
+blockquote {
+  animation: shadows 2s linear infinite alternate;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+blockquote p {
+  font-size: 1.5em;
+}
+cite {
+  display: block;
+  font-style: italic;
+  text-align: right;
+}
+cite:before {
+  content: "- ";
+}
+
+@keyframes shadows {
+  0% {
+    box-shadow: 0 2px 6px -6px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95);
+  }
+  100% {
+    box-shadow: 0 3px 6px 6px rgba(0, 0, 0, 0.25);
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 980px) {
+  .hero {
+    flex-direction: column;
+  }
+  .heroImage {
+    width: 100%;
+  }
+  .animated_shadow_quote {
+    margin: 2% auto;
+  }
+}

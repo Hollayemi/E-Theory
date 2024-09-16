@@ -1,0 +1,104 @@
+.qBanner {
+  background: #dedede;
+  padding: 25px;
+  text-align: center;
+}
+.wrappers {
+  width: 45%;
+  margin: 0 auto;
+}
+.qBanner p {
+  font-size: 1.8rem;
+}
+.ExamWrap {
+  padding: 10px;
+  margin: 3% auto;
+  width: 85%;
+  background: #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+.ExamWrap div {
+  width: 98%;
+}
+.quest {
+  width: 100%;
+  background: rgb(192, 191, 191);
+  height: 97%;
+  padding: 10px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.ans {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 0 auto;
+}
+.ans textarea {
+  width: 100%;
+  height: 18rem;
+  max-height: 24rem;
+  padding: 10px;
+}
+.ans textarea:focus {
+  outline: none;
+}
+.toggle {
+  margin: 0 auto;
+  text-align: center;
+}
+.toggle button {
+  padding: 5px 15px;
+  border-style: none;
+  border-radius: 8px;
+  margin: 2% 15px;
+  width: max-content;
+  font-size: 1.3em;
+  color: #fff;
+}
+.back {
+  background: #850101;
+}
+.next {
+  background: #5dacf5d7;
+}
+.icons {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.submit {
+  border-style: none;
+  padding: 8px;
+  border-radius: 10px;
+  color: #fff;
+  background: #094074;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3% auto;
+}
+.submit:hover {
+  background: #5dacf5d7;
+}
+.iconssub {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 8px;
+}
+.hide {
+  visibility: hidden;
+}
+.error {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #d40303;
+  text-align: center;
+}
+@media screen and (max-width: 980px) {
+  .ExamWrap {
+    flex-direction: column;
+    width: 98%;
+  }
+}
