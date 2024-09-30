@@ -12,8 +12,6 @@ const Exam = (props) =>{
   const examQuestions = props.exam;
   const user = props.user;
   //exan questions
- 
-
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -34,7 +32,6 @@ const Exam = (props) =>{
   let exam = examQuestions.filter((exams) =>{
     return exams.course_code.toLowerCase() === code.toLowerCase();
   })
-  console.log(exam)
   //for submit button toggle
   const [showSubmit, setShowSubmit] = useState(false);
 
@@ -85,13 +82,11 @@ const Exam = (props) =>{
   //handle exam questions
   const toggleQuestions = (option) => {
     if((exam.length -1) !== nextQuest && option ==='next'){
-      // ansQust();
       setNextQuest(nextQuest + 1);
   
       return;
     }
     if(option ==='next' && (exam.length - 1) === nextQuest){
-      // ansQust();
       setShowSubmit(true);
       return;
     }
@@ -171,18 +166,21 @@ const Exam = (props) =>{
               <div className='ansContainer'>
                 <div className={styles.ans}>
                   <textarea cols='4' rows='3' placeholder="Enter Your Answer Here." 
-                    // value={answers[nextQuest]?.ans || ""}
+                    value={newAns || answers[nextQuest]?.ans || ""}
                     onChange={(e) => typeAns(e.target.value)}
                   />
                 </div>
                 <div className={styles.toggle}>
                   <button className={styles.back}
-                    onClick={() => toggleQuestions('back')}
+                    onClick={() => {
+                      newAns && setAns((prevAnswers) => { return {...prevAnswers,  [nextQuest]: {ans: newAns, examId: exam[nextQuest]._id}}});
+                      toggleQuestions('back')}}
                   > <FaChevronLeft className={styles.icons} />Back</button>
                   <button className={styles.next}
                     onClick={() => {
-                      setAns((prevAnswers) => { return {...prevAnswers,  [nextQuest]: [{ans: newAns, examId: exam[0]._id}]}});
-                      toggleQuestions('next')
+                      newAns && setAns((prevAnswers) => { return {...prevAnswers,  [nextQuest]: {ans: newAns, examId: exam[nextQuest]._id}}});
+                      typeAns("");
+                      toggleQuestions('next');
                     }}
                   >Next <FaChevronRight className={styles.icons}/></button>
                 </div>

@@ -20,6 +20,7 @@ const LoadQuestion = ({ lecInfo }) => {
   const [key3, setKey3] = useState('');
   const [key4, setKey4] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState("")
 
   let payload ={
     dept,
@@ -36,7 +37,7 @@ const LoadQuestion = ({ lecInfo }) => {
     setError('');
     setLoading(true);
     if(dept ==='' || level ==='' || course === '' || code ==='' ||quest ==='' ||
-      ans === '' || key1 ==='' || key2 ==='' || key3 ==='' || key4 ===''
+      ans === '' || key1 ==='' || key2 ==='' 
     ){
       setTimeout(() => {
         setError('Please fill out all Fields.');
@@ -65,9 +66,12 @@ const LoadQuestion = ({ lecInfo }) => {
           }, 2000);
           return;
         }
+      }).catch(() => {
+
+        setError('Ooops! Something went wrong. Check your network and try again.')
       })
-      setError('Ooops! Something went wrong. Check your network and try again.')
       setLoading(false);
+      setSuccess('Uploaded successfully')
     }
     upload();
   }
@@ -146,6 +150,7 @@ const LoadQuestion = ({ lecInfo }) => {
             </div>
           </div>
           <p className='text-danger font-weight-bold'>{error}</p>
+          <p className='text-success font-weight-bold'>{success}</p>
           <div>
             { !loading ? <button className={styles.uploadBtn}
                 onClick={() => handleSubmit()}
